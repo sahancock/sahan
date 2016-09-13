@@ -11,11 +11,44 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
 
-Route::get('home', 'HomeController@index');
+// <------------------------------------------------------------------------------------Set Routes to static pages---------------------------------------------------------------------->
 
-Route::controllers([
-	'auth' => 'Auth\AuthController',
-	'password' => 'Auth\PasswordController',
-]);
+Route::get('/', array('as' => 'home', function()
+{
+    return View::make('pages/home');
+}));
+
+Route::get('/discgolf', array('as' => 'discgolf', function()
+{
+    return View::make('pages/discgolf');
+}));
+
+Route::get('/hiking', array('as' => 'hiking', function()
+{
+    return View::make('pages/hiking');
+}));
+
+Route::get('/contact', array('as' => 'contact', function()
+{
+    return View::make('pages/contact');
+}));
+
+Route::get('/kayak', array('as' => 'kayak', function()
+{
+    return View::make('pages/kayak');
+}));
+
+Route::get('/camping', array('as' => 'camping', function()
+{
+    return View::make('pages/camping');
+}));
+
+
+
+
+
+
+
+
+

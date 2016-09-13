@@ -1,11 +1,23 @@
 @extends('app')
+<style>
 
+    body{
+        height:100%;
+
+        background: url("/images/bg-image.png.jpg");
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+</style>
 @section('content')
-<div class="container-fluid">
+<div class="container-fluid"style="background-color: transparent;">
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
 			<div class="panel panel-default">
-				<div class="panel-heading">Register</div>
+				<div class="panel-heading"style="background-color: #ddffdd;">Register</div>
 				<div class="panel-body">
 					@if (count($errors) > 0)
 						<div class="alert alert-danger">
@@ -34,7 +46,14 @@
 								<input type="email" class="form-control" name="email" value="{{ old('email') }}">
 							</div>
 						</div>
-
+						
+						<div class="form-group">
+							<label class="col-md-4 control-label">Screen Name</label>
+							<div class="col-md-6">
+								<input type="text" class="form-control" name="screenname" value="{{ old('screenname') }}">
+							</div>
+						</div>
+						
 						<div class="form-group">
 							<label class="col-md-4 control-label">Password</label>
 							<div class="col-md-6">
@@ -48,6 +67,7 @@
 								<input type="password" class="form-control" name="password_confirmation">
 							</div>
 						</div>
+
 
 						<div class="form-group">
 							<div class="col-md-6 col-md-offset-4">
