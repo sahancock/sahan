@@ -1,11 +1,23 @@
 @extends('app')
+<style>
 
+    body{
+        height:100%;
+
+        background: url("/images/bg-image.jpg");
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+</style>
 @section('content')
-<div class="container-fluid">
+<div class="container-fluid"style="background-color:transparent;>
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
 			<div class="panel panel-default">
-				<div class="panel-heading">Login</div>
+				<div class="panel-heading"style="background-color: #ddffdd;">Login</div>
 				<div class="panel-body">
 					@if (count($errors) > 0)
 						<div class="alert alert-danger">
